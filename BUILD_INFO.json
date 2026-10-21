@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0-rc.1",
+  "esphome": "2026.9.1",
+  "esp_idf": "5.5.5",
+  "ethernet_dependency": "mvs90/esphome-usb-ethernet@v0.1.0-rc.5",
+  "runtime_changed_by_split": false,
+  "scope": "USB_ECM and USB_RTL8152 overlay only; not arbitrary ESPHome Ethernet drivers",
+  "host_sanitizer_suites": 3,
+  "publication_validation": {
+    "date": "2026-10-21",
+    "ethernet_runtime_suites": 17,
+    "lldp_runtime_suites": 3,
+    "complete_builds": [
+      "inline",
+      "p2c5v",
+      "ecm",
+      "ethernet-plus-separated-lldp"
+    ],
+    "firmware_credentials": "synthetic build-only; never flashed"
+  }
+}
