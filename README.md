@@ -1,5 +1,7 @@
 # LLDP for ESPHome USB Ethernet
 
+**Browser-only setup:** [Paste YAML into the Device Builder and first-flash with ESPHome Web](docs/WEB_EDITOR.md), with no component files or `secrets.yaml` to copy.
+
 [Deutsch](README.de.md) · [Full configuration](examples/usb-p2c5v-lldp.yaml) · [Protocol/options](docs/LLDP.md) · [Ethernet dependency](https://github.com/mvs90/esphome-usb-ethernet)
 
 An optional LLDP agent for ESPHome: show the directly connected switch in Home Assistant, advertise a configurable device identity, and enable/disable LLDP from an entity.

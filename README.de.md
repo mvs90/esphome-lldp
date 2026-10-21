@@ -1,5 +1,7 @@
 # LLDP als externe ESPHome-Komponente
 
+**Ohne Dateien zu kopieren oder Terminal:** [YAML im Webeditor einfügen und mit ESPHome Web erstflashen](docs/WEB_EDITOR.de.md). Vollständige Vorlage ohne `secrets.yaml` und mit automatisch geladenen GitHub-Komponenten.
+
 [English](README.md) · [Vollständiges Beispiel](examples/usb-p2c5v-lldp.yaml) · [Alle Optionen](docs/LLDP.md)
 
 LLDP zeigt in Home Assistant den direkt angeschlossenen Switch/Nachbarn und sendet eine einstellbare eigene Geräteidentität. Ein Schalter aktiviert/deaktiviert LLDP. Systemname, Portbeschreibung und Systembeschreibung können über normale Textentitäten verändert werden.
