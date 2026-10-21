@@ -1,5 +1,7 @@
 # LLDP for ESPHome USB Ethernet
 
+**v0.1.0-rc.6 test release:** reconnect changes are software-tested only; physical adapter replacement, fixed-MAC replacement and live hotplug remain unqualified with this version. [Pending tests](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.6/docs/ADAPTER_SWITCHING.de.md).
+
 **Browser-only setup:** [Paste YAML into the Device Builder and first-flash with ESPHome Web](docs/WEB_EDITOR.md), with no component files or `secrets.yaml` to copy.
 
 [Deutsch](README.de.md) · [Full configuration](examples/usb-p2c5v-lldp.yaml) · [Protocol/options](docs/LLDP.md) · [Ethernet dependency](https://github.com/mvs90/esphome-usb-ethernet)
@@ -8,7 +10,7 @@ An optional LLDP agent for ESPHome: show the directly connected switch in Home A
 
 **This repository contains only LLDP.** It currently needs the Layer-2 interface provided by **mvs90/esphome-usb-ethernet** and supports that overlay's `USB_RTL8152` and `USB_ECM` backends. It is **not** a generic add-on for every stock ESPHome Ethernet driver. The protocol implementation is separate from the Realtek register driver.
 
-Pinned/tested combination: **ESPHome2026.9.1 / ESP-IDF5.5.5**, Ethernet **v0.1.0-rc.5**, LLDP **v0.1.0-rc.1**. Hardware integration was tested with the Waveshare ESP32-S3-LCD-Driver-Board and measured InLine33380J POE01 / P2C5V RTL8152-4C10 adapters. Do not infer compatibility with another board or silicon revision.
+Pinned test-release combination: **ESPHome2026.9.1 / ESP-IDF5.5.5**, Ethernet **v0.1.0-rc.6**, LLDP **v0.1.0-rc.1**. Hardware integration was tested with the Waveshare ESP32-S3-LCD-Driver-Board and measured InLine33380J POE01 / P2C5V RTL8152-4C10 adapters. Do not infer compatibility with another board or silicon revision.
 
 ## Add LLDP to an existing USB-Ethernet project
 
@@ -16,7 +18,7 @@ Keep your existing board, UART, API/OTA, and single Ethernet instance. Load comp
 
 ```yaml
 external_components:
-  - source: github://mvs90/esphome-usb-ethernet@v0.1.0-rc.5
+  - source: github://mvs90/esphome-usb-ethernet@v0.1.0-rc.6
     components: [ethernet, ethernet_info, logger]
   - source: github://mvs90/esphome-lldp@v0.1.0-rc.1
     components: [lldp]
@@ -39,7 +41,7 @@ lldp:
   ttl: 120
 ```
 
-Use [usb-p2c5v-lldp.yaml](examples/usb-p2c5v-lldp.yaml) as a complete board example, with your own adjacent `secrets.yaml`. InLine uses the same native backend. For first flash, PoE wiring and recovery follow the [Ethernet setup guide](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.5/docs/SETUP.md). Native USB logging conflicts with the USB host; the tested example uses UART0.
+Use [usb-p2c5v-lldp.yaml](examples/usb-p2c5v-lldp.yaml) as a complete board example, with your own adjacent `secrets.yaml`. InLine uses the same native backend. For first flash, PoE wiring and recovery follow the [Ethernet setup guide](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.6/docs/SETUP.md). Native USB logging conflicts with the USB host; the tested example uses UART0.
 
 ## What Home Assistant displays
 
@@ -77,6 +79,6 @@ Do not copy these example MACs into a live deployment. Verify the source-MAC/phy
 
 Three Clang ASan/UBSan suites cover protocol parsing, the real component lifecycle, and calibrated UniFi mapping: `python3 tools/run_cpp_tests.py`. Synthetic fixture frames can be regenerated with `python3 tools/generate_lldp_fixtures.py`. `tools/test_schema_lldp.py` covers configuration guards in the pinned ESPHome environment. CI compiles the combined example with synthetic credentials; never flash that test image.
 
-Hardware evidence includes independent mirrored transmission, neighbor receipt, runtime identity edits, enable/disable/lifetime behavior and calibration on several physical switch ports. Ethernet qualification limitations remain in the [driver's test status](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.5/TEST_STATUS.md), including the documented P2C5V host-link exception. No complete LLDP-MED feature set or support for every Ethernet backend is claimed.
+Hardware evidence includes independent mirrored transmission, neighbor receipt, runtime identity edits, enable/disable/lifetime behavior and calibration on several physical switch ports. Ethernet qualification limitations remain in the [driver's test status](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.6/TEST_STATUS.md), including the documented P2C5V host-link exception. No complete LLDP-MED feature set or support for every Ethernet backend is claimed.
 
 C/C++ runtime: GPL-3.0-only; Python: MIT, with preserved upstream notices. See [LICENSE](LICENSE), [NOTICE.md](NOTICE.md), and [CONTRIBUTING.md](CONTRIBUTING.md).

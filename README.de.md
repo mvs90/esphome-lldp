@@ -1,5 +1,7 @@
 # LLDP als externe ESPHome-Komponente
 
+**Testversion v0.1.0-rc.6:** Die neue Wiedererkennung ist softwareseitig geprüft; Adapterwechsel, feste MAC beim Wechsel und Live-Hotplug sind mit dieser Version noch nicht hardwaregeprüft. [Offene Tests](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.6/docs/ADAPTER_SWITCHING.de.md).
+
 **Ohne Dateien zu kopieren oder Terminal:** [YAML im Webeditor einfügen und mit ESPHome Web erstflashen](docs/WEB_EDITOR.de.md). Vollständige Vorlage ohne `secrets.yaml` und mit automatisch geladenen GitHub-Komponenten.
 
 [English](README.md) · [Vollständiges Beispiel](examples/usb-p2c5v-lldp.yaml) · [Alle Optionen](docs/LLDP.md)
@@ -10,11 +12,11 @@ LLDP zeigt in Home Assistant den direkt angeschlossenen Switch/Nachbarn und send
 
 Dieses Repository enthält **nur die LLDP-Komponente**. Sie benötigt derzeit die Layer-2-Schnittstelle aus [mvs90/esphome-usb-ethernet](https://github.com/mvs90/esphome-usb-ethernet) mit `USB_RTL8152` oder `USB_ECM`. Sie funktioniert nicht automatisch mit allen normalen ESPHome-Ethernettreibern.
 
-Die geprüfte Kombination ist ESPHome **2026.9.1**, ESP-IDF **5.5.5**, Ethernet **v0.1.0-rc.5** und LLDP **v0.1.0-rc.1**. Im vorhandenen USB-Ethernet-Projekt zwei Quellen laden:
+Die für diese Testversion festgelegte Kombination ist ESPHome **2026.9.1**, ESP-IDF **5.5.5**, Ethernet **v0.1.0-rc.6** und LLDP **v0.1.0-rc.1**. Im vorhandenen USB-Ethernet-Projekt zwei Quellen laden:
 
 ```yaml
 external_components:
-  - source: github://mvs90/esphome-usb-ethernet@v0.1.0-rc.5
+  - source: github://mvs90/esphome-usb-ethernet@v0.1.0-rc.6
     components: [ethernet, ethernet_info, logger]
   - source: github://mvs90/esphome-lldp@v0.1.0-rc.1
     components: [lldp]
@@ -36,7 +38,7 @@ lldp:
   ttl: 120
 ```
 
-Wer neu beginnt, kopiert das [vollständige Beispiel](examples/usb-p2c5v-lldp.yaml), legt daneben eigene `secrets.yaml` an und folgt der [Ethernet-Einrichtungsanleitung](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.5/README.de.md). InLine und P2C5V benutzen denselben nativen Backendtyp; Platine und Chiprevision müssen zum getesteten Aufbau passen.
+Wer neu beginnt, kopiert das [vollständige Beispiel](examples/usb-p2c5v-lldp.yaml), legt daneben eigene `secrets.yaml` an und folgt der [Ethernet-Einrichtungsanleitung](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.6/README.de.md). InLine und P2C5V benutzen denselben nativen Backendtyp; Platine und Chiprevision müssen zum getesteten Aufbau passen.
 
 ## Anzeige und eigene Angaben
 
