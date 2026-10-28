@@ -82,3 +82,9 @@ Three Clang ASan/UBSan suites cover protocol parsing, the real component lifecyc
 Hardware evidence includes independent mirrored transmission, neighbor receipt, runtime identity edits, enable/disable/lifetime behavior and calibration on several physical switch ports. Ethernet qualification limitations remain in the [driver's test status](https://github.com/mvs90/esphome-usb-ethernet/blob/v0.1.0-rc.6/TEST_STATUS.md), including the documented P2C5V host-link exception. No complete LLDP-MED feature set or support for every Ethernet backend is claimed.
 
 C/C++ runtime: GPL-3.0-only; Python: MIT, with preserved upstream notices. See [LICENSE](LICENSE), [NOTICE.md](NOTICE.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Support this project
+
+If you find this project useful, you can support its development and maintenance
+with a voluntary contribution via [PayPal](https://www.paypal.me/mvs90).
+Thank you for your support!

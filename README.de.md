@@ -55,3 +55,9 @@ Rohe Port-ID und Beschreibung bleiben sichtbar. Die optionale Ableitung einer ph
 LLDP ist lokal zum Ethernetsegment; auf einem anderen normalen Switchport sieht ein Mac diese Frames meist nicht. Für einen Sendenachweis braucht es einen passenden Spiegelport. LLDP-MED und beliebige ESPHome-Ethernettreiber sind nicht allgemein implementiert. Hardwaregrenzen des darunterliegenden Ethernettreibers gelten weiterhin.
 
 Drei Sanitizer-Suiten lassen sich mit `python3 tools/run_cpp_tests.py` ausführen. Die CI baut das kombinierte Beispiel mit synthetischen Zugangsdaten; solche Images niemals flashen. Lizenz: C/C++ GPL-3.0-only, Python MIT, siehe [LICENSE](LICENSE).
+
+## Projekt unterstützen
+
+Wenn dir dieses Projekt hilft, kannst du seine Weiterentwicklung und Pflege
+freiwillig über [PayPal](https://www.paypal.me/mvs90) unterstützen.
+Vielen Dank für deine Unterstützung!
