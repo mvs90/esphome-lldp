@@ -59,5 +59,6 @@ Drei Sanitizer-Suiten lassen sich mit `python3 tools/run_cpp_tests.py` ausführe
 ## Projekt unterstützen
 
 Wenn dir dieses Projekt hilft, kannst du seine Weiterentwicklung und Pflege
-freiwillig über [PayPal](https://www.paypal.me/mvs90) unterstützen.
+freiwillig über [GitHub Sponsors](https://github.com/sponsors/mvs90) oder
+[PayPal](https://www.paypal.me/mvs90) unterstützen.
 Vielen Dank für deine Unterstützung!
